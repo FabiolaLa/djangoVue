@@ -116,7 +116,7 @@ CREATE TABLE `auth_user` (
   `date_joined` datetime(6) NOT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `username` (`username`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -125,7 +125,7 @@ CREATE TABLE `auth_user` (
 
 LOCK TABLES `auth_user` WRITE;
 /*!40000 ALTER TABLE `auth_user` DISABLE KEYS */;
-INSERT INTO `auth_user` VALUES (1,'pbkdf2_sha256$180000$OmyM0wA3foHN$bX2kJF6tlmKiewXrXTQgrOLW9dJHt183a3UCx6RQUZc=','2020-06-17 04:30:27.241706',1,'admin','','','admin@gmail.com',1,1,'2020-06-17 04:27:36.124800');
+INSERT INTO `auth_user` VALUES (1,'pbkdf2_sha256$180000$OmyM0wA3foHN$bX2kJF6tlmKiewXrXTQgrOLW9dJHt183a3UCx6RQUZc=','2020-06-17 04:30:27.241706',1,'admin','','','admin@gmail.com',1,1,'2020-06-17 04:27:36.124800'),(2,'pbkdf2_sha256$180000$rgUKfiolboqP$E0nOMb2qtcOvqB/aKHrH+FM8MbXT+IXE8RvNRFtv5kg=','2020-06-18 23:40:09.875722',1,'fabiola','','','fabi20laureano@gmail.com',1,1,'2020-06-18 23:39:22.528043');
 /*!40000 ALTER TABLE `auth_user` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -207,7 +207,7 @@ CREATE TABLE `django_admin_log` (
   CONSTRAINT `django_admin_log_content_type_id_c4bce8eb_fk_django_co` FOREIGN KEY (`content_type_id`) REFERENCES `django_content_type` (`id`),
   CONSTRAINT `django_admin_log_user_id_c564eba6_fk_auth_user_id` FOREIGN KEY (`user_id`) REFERENCES `auth_user` (`id`),
   CONSTRAINT `django_admin_log_chk_1` CHECK ((`action_flag` >= 0))
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -216,7 +216,7 @@ CREATE TABLE `django_admin_log` (
 
 LOCK TABLES `django_admin_log` WRITE;
 /*!40000 ALTER TABLE `django_admin_log` DISABLE KEYS */;
-INSERT INTO `django_admin_log` VALUES (1,'2020-06-17 04:35:39.074963','1','Producto',1,'[{\"added\": {}}]',8,1),(2,'2020-06-17 04:39:31.267814','1','Cate',1,'[{\"added\": {}}]',7,1),(3,'2020-06-17 04:39:55.209335','2','Cate 2',1,'[{\"added\": {}}]',7,1),(4,'2020-06-17 04:40:18.733197','2','Post',1,'[{\"added\": {}}]',8,1),(5,'2020-06-17 04:41:49.279413','1','Elemento 1',1,'[{\"added\": {}}]',9,1);
+INSERT INTO `django_admin_log` VALUES (1,'2020-06-17 04:35:39.074963','1','Producto',1,'[{\"added\": {}}]',8,1),(2,'2020-06-17 04:39:31.267814','1','Cate',1,'[{\"added\": {}}]',7,1),(3,'2020-06-17 04:39:55.209335','2','Cate 2',1,'[{\"added\": {}}]',7,1),(4,'2020-06-17 04:40:18.733197','2','Post',1,'[{\"added\": {}}]',8,1),(5,'2020-06-17 04:41:49.279413','1','Elemento 1',1,'[{\"added\": {}}]',9,1),(6,'2020-06-18 23:49:12.103237','2','Elemento 3',1,'[{\"added\": {}}]',9,2),(7,'2020-06-18 23:49:39.005875','3','Elemento 4',1,'[{\"added\": {}}]',9,2),(8,'2020-06-19 04:31:41.445680','4','Tipo 1',1,'[{\"added\": {}}]',8,2),(9,'2020-06-19 04:32:19.640267','3','Categoria 23',1,'[{\"added\": {}}]',7,2);
 /*!40000 ALTER TABLE `django_admin_log` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -294,7 +294,7 @@ CREATE TABLE `django_session` (
 
 LOCK TABLES `django_session` WRITE;
 /*!40000 ALTER TABLE `django_session` DISABLE KEYS */;
-INSERT INTO `django_session` VALUES ('6p2fhf5xjdqye0cq8gf1v2uibpvtejcb','NjkzZDI3MjE3NzIzNGU1NzgzYTM1NzM3NDY5NDczYzRlY2MxNTE0YTp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiJjY2MxYTkwNDZjOWMyYzgzZjMyMDcwY2UwOTdkN2QxMjQ1ZjFjNjU4In0=','2020-07-01 04:30:27.703216');
+INSERT INTO `django_session` VALUES ('6p2fhf5xjdqye0cq8gf1v2uibpvtejcb','NjkzZDI3MjE3NzIzNGU1NzgzYTM1NzM3NDY5NDczYzRlY2MxNTE0YTp7Il9hdXRoX3VzZXJfaWQiOiIxIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiJjY2MxYTkwNDZjOWMyYzgzZjMyMDcwY2UwOTdkN2QxMjQ1ZjFjNjU4In0=','2020-07-01 04:30:27.703216'),('al07ij1a5icw70iz8cw7p9d4yc94fabm','MDY1YWQxYjY3NGM0NWE3MWExOGRiNDNjMGYwOGYwMmZiNGEyNmQ1OTp7Il9hdXRoX3VzZXJfaWQiOiIyIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQiLCJfYXV0aF91c2VyX2hhc2giOiI3M2RiZmJkZjg1Y2U4YjFlYjUzYzg3Mjk4NGE1NGE4OTIwZWJiMTdjIn0=','2020-07-02 23:40:10.170261');
 /*!40000 ALTER TABLE `django_session` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -310,7 +310,7 @@ CREATE TABLE `listelement_category` (
   `title` varchar(255) NOT NULL,
   `url_clean` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -319,7 +319,7 @@ CREATE TABLE `listelement_category` (
 
 LOCK TABLES `listelement_category` WRITE;
 /*!40000 ALTER TABLE `listelement_category` DISABLE KEYS */;
-INSERT INTO `listelement_category` VALUES (1,'Cate','cate_1'),(2,'Cate 2','cate_2');
+INSERT INTO `listelement_category` VALUES (1,'Cate','cate_1'),(2,'Cate 2','cate_2'),(3,'Categoria 23','categoria 23');
 /*!40000 ALTER TABLE `listelement_category` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -342,7 +342,7 @@ CREATE TABLE `listelement_element` (
   KEY `listelement_element_type_id_fb64cc60_fk_listelement_type_id` (`type_id`),
   CONSTRAINT `listelement_element_category_id_a6a78c8b_fk_listeleme` FOREIGN KEY (`category_id`) REFERENCES `listelement_category` (`id`),
   CONSTRAINT `listelement_element_type_id_fb64cc60_fk_listelement_type_id` FOREIGN KEY (`type_id`) REFERENCES `listelement_type` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -351,7 +351,7 @@ CREATE TABLE `listelement_element` (
 
 LOCK TABLES `listelement_element` WRITE;
 /*!40000 ALTER TABLE `listelement_element` DISABLE KEYS */;
-INSERT INTO `listelement_element` VALUES (1,'Elemento 1','elemento_1','Elemento 1 descripcion',1,1);
+INSERT INTO `listelement_element` VALUES (1,'Elemento 1','elemento_1','Elemento 1 descripcion',1,1),(2,'Elemento 3','elemento 3','Elementos',2,1),(3,'Elemento 4','elemento 4','Todos los elementos',2,1);
 /*!40000 ALTER TABLE `listelement_element` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -367,7 +367,7 @@ CREATE TABLE `listelement_type` (
   `title` varchar(255) NOT NULL,
   `url_clean` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -376,7 +376,7 @@ CREATE TABLE `listelement_type` (
 
 LOCK TABLES `listelement_type` WRITE;
 /*!40000 ALTER TABLE `listelement_type` DISABLE KEYS */;
-INSERT INTO `listelement_type` VALUES (1,'Producto','Producto'),(2,'Post','post');
+INSERT INTO `listelement_type` VALUES (1,'Producto','Producto'),(2,'Post','post'),(4,'Tipo 1','tipo 1');
 /*!40000 ALTER TABLE `listelement_type` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -389,4 +389,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-06-17 19:49:01
+-- Dump completed on 2020-06-18 23:45:03
